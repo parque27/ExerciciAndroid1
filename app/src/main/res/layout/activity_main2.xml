@@ -5,34 +5,35 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
-    <TextView
-        android:id="@+id/helloWorldText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Hello World!"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/toastButton"
+    <ImageView
+        android:id="@+id/pikePicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/toastButton"
-        app:layout_constraintStart_toStartOf="@+id/helloWorldText"
-        app:layout_constraintTop_toBottomOf="@+id/helloWorldText" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pike" />
+
+    <TextView
+        android:id="@+id/pikeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/pikeTitle"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/pikePicture"
+        app:layout_constraintStart_toStartOf="@+id/pikePicture"
+        app:layout_constraintTop_toBottomOf="@+id/pikePicture" />
 
     <Button
-        android:id="@+id/pikeButton"
+        android:id="@+id/returnBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="@string/pike"
+        android:text="@string/returnBtn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/toastButton" />
-
+        app:layout_constraintStart_toStartOf="@+id/pikePicture" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,6 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -11,35 +10,26 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.myapplication.databinding.ActivityMain2Binding;
 import com.example.myapplication.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         EdgeToEdge.enable(this);
 
-        // Generem el binding per vincular l'activity amb el layout
-        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        ActivityMain2Binding binding = ActivityMain2Binding.inflate(getLayoutInflater());
         // Posem el view al root
         setContentView(binding.getRoot());
 
-        // Bloc de codi per al botó de toast
-        binding.toastButton.setOnClickListener(view -> {
-            CharSequence text = "Hello";
-            int duration = Toast.LENGTH_SHORT;
-            Toast toast = Toast.makeText(MainActivity.this, text, duration);
-            toast.show();
-        });
-        // Bloc de codi per al botó de la Pike
-        binding.pikeButton.setOnClickListener(view -> {
-            Intent intent = new Intent(this, MainActivity2.class);
-            startActivity(intent);
+        binding.returnBtn.setOnClickListener(view -> {
+            Toast.makeText(this, "Click!", Toast.LENGTH_SHORT).show();
+            finish();
         });
 
-        ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
