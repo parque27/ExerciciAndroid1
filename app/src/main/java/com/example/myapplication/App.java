@@ -1,9 +1,12 @@
+package com.example.myapplication;
 import android.app.Application;
+import com.example.myapplication.api.ApiService;
+
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 public class App extends Application {
-    AppService appService;
+    ApiService appService;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -14,8 +17,9 @@ public class App extends Application {
                 .baseUrl("http://localhost:8080")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        appService = retrofit.create(AppService.class);
+        appService = retrofit.create(ApiService.class);
     }
-    public AppService getAPI() {
+    public ApiService getAPI() {
         return appService;
     }
+}

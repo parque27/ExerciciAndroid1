@@ -8,9 +8,9 @@
     tools:context=".MainActivity2">
 
     <ImageView
-        android:id="@+id/pikePicture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/pikeImg"
+        android:layout_width="337dp"
+        android:layout_height="269dp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,22 +18,22 @@
         app:srcCompat="@drawable/pike" />
 
     <TextView
-        android:id="@+id/pikeTitle"
+        android:id="@+id/pikeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/pikeTitle"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/pikePicture"
-        app:layout_constraintStart_toStartOf="@+id/pikePicture"
-        app:layout_constraintTop_toBottomOf="@+id/pikePicture" />
+        android:layout_marginTop="24dp"
+        android:text="@string/pikeTest"
+        app:layout_constraintEnd_toEndOf="@+id/pikeImg"
+        app:layout_constraintStart_toStartOf="@+id/pikeImg"
+        app:layout_constraintTop_toBottomOf="@+id/pikeImg" />
 
     <Button
         android:id="@+id/returnBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/returnBtn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/pikePicture" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,4 @@
 package com.example.myapplication.api;
-
 import com.google.gson.annotations.SerializedName;
 
 public class UserDto {
@@ -12,4 +11,7 @@ public class UserDto {
 
     @SerializedName("email")
     public String email;
+
+
+
 }

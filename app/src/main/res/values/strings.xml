@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="toastButton">Toast</string>
-    <string name="pike">Pike</string>
-    <string name="pikeTitle">Pike Trickfoot</string>
+    <string name="pikeButton">Pike</string>
+    <string name="pikeTest">Pike Trickfoot</string>
     <string name="returnBtn">Return</string>
+    <string name="apiBtn">Retrieve</string>
+    <string name="_0">0</string>
+    <string name="username">Username</string>
+    <string name="email">E-mail</string>
 </resources>
