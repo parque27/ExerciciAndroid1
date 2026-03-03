@@ -12,4 +12,6 @@ public class UserDto {
     @SerializedName("email")
     public String email;
 
+
+
 }
